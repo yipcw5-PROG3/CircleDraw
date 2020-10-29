@@ -22,6 +22,16 @@ public class Drawing extends Canvas {
         circ=new Circle(p, c, r);
         rect=new Rect(p2, c, w, h);
 
+        setupFrame();
+        setupCanvas();
+    }
+
+    private void setupCanvas() {
+        setBackground(Color.WHITE);
+        setSize(400,400);
+    }
+
+    private void setupFrame() {
         f=new Frame("My window");
         f.add(this);
         f.setLayout(null);
@@ -32,9 +42,8 @@ public class Drawing extends Canvas {
                 f.dispose();
             }
         });
-        setBackground(Color.WHITE);
-        setSize(400,400);
     }
+
     // Circle and Rectangle drawer
     public void paint(Graphics g) {
         circ.draw(g);
