@@ -1,9 +1,11 @@
+import shapes.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Drawing extends Canvas {
 
-    // Circle and Rect constructors (pt 1)
+    // shapes.Circle and shapes.Rect constructors (pt 1)
     Point p = new Point(200, 200);
     Color c = new Color(0x992266);
     int r = 50;
@@ -18,7 +20,7 @@ public class Drawing extends Canvas {
     private Frame f;
     public Drawing(){
 
-        // Circle and Rect constructors (pt 2)
+        // shapes.Circle and shapes.Rect constructors (pt 2)
         circ=new Circle(p, c, r);
         rect=new Rect(p2, c, w, h);
 
@@ -44,7 +46,7 @@ public class Drawing extends Canvas {
         });
     }
 
-    // Circle and Rectangle drawer
+    // shapes.Circle and Rectangle drawer
     public void paint(Graphics g) {
         circ.draw(g);
         rect.draw(g);
